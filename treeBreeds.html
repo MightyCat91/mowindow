@@ -136,15 +136,13 @@
 <main>
     <section class="breeds">
         <div class="container">
-            <div class="wrapper col-md-10 col-xs-10">
+            <div class="wrapper col-md-10 col-xs-9">
                 <div class="sosna">
-                    <h2 id="sosna" class="h2 col-md-offset-6 col-nd-6">Сосна</h2>
+                    <h2 id="sosna" class="h2 breed__type__header col-md-offset-6 col-md-6">Сосна</h2>
 
                     <div class="breed__img col-md-6 col-xs-12">
-                        <img class="img-circle" src="assets/static/pages/treeBreeds/images/sosna.png">
-                        <img src="assets/static/pages/treeBreeds/images/sosna__tree__transparent.png"
-                             class="tree__transparent">
-                        <img src="assets/static/pages/treeBreeds/images/sosna__tree.png" class="tree">
+                        <img src="assets/static/pages/treeBreeds/images/sosna.png">
+                        <img src="assets/static/pages/treeBreeds/images/sosna__icon.png" class="icon">
                     </div>
                     <div class="breed__description col-md-6 col-xs-12">
                         <div class="breed__type">
@@ -195,6 +193,7 @@
                             </div>
                             <form class="callback__form descr__block" method="post"
                                   action="assets/components/calls/callRequestExtendedHandler.php">
+                                <h2 class="accent">Оставить заявку на заказ окон из сосны</h2>
                                 <div class="form-group">
                                     <input type="text" name="username" required="" placeholder="Имя">
                                 </div>
@@ -210,13 +209,11 @@
                     </div>
                 </div>
                 <div class="listvennicza">
-                    <h2 id="listvennicza" class="h2 col-md-offset-6 col-nd-6">Лиственница</h2>
+                    <h2 id="listvennicza" class="h2 breed__type__header col-md-offset-6 col-md-6">Лиственница</h2>
 
                     <div class="breed__img col-md-6 col-xs-12">
-                        <img class="img-circle" src="assets/static/pages/treeBreeds/images/listvennicza.png">
-                        <img src="assets/static/pages/treeBreeds/images/listvennicza__tree__transparent.png"
-                             class="tree__transparent">
-                        <img src="assets/static/pages/treeBreeds/images/listvennicza__tree.png" class="tree">
+                        <img src="assets/static/pages/treeBreeds/images/listvennicza.png">
+                        <img src="assets/static/pages/treeBreeds/images/listvennicza__icon.png" class="icon">
                     </div>
                     <div class="breed__description col-md-6 col-xs-12">
                         <div class="breed__type">
@@ -284,13 +281,11 @@
                     </div>
                 </div>
                 <div class="dub">
-                    <h2 id="dub" class="h2 col-md-offset-6 col-nd-6">Дуб</h2>
+                    <h2 id="dub" class="h2 breed__type__header col-md-offset-6 col-md-6">Дуб</h2>
 
                     <div class="breed__img col-md-6 col-xs-12">
-                        <img class="img-circle" src="assets/static/pages/treeBreeds/images/dub.png">
-                        <img src="assets/static/pages/treeBreeds/images/dub__tree__transparent.png"
-                             class="tree__transparent">
-                        <img src="assets/static/pages/treeBreeds/images/dub__tree.png" class="tree">
+                        <img src="assets/static/pages/treeBreeds/images/dub.png">
+                        <img src="assets/static/pages/treeBreeds/images/dub__icon.png" class="icon">
                     </div>
                     <div class="breed__description col-md-6 col-xs-12">
                         <div class="breed__type">
@@ -358,28 +353,48 @@
                     </div>
                 </div>
             </div>
-            <aside class="fixed__container__wrapper text-center col-md-2 col-xs-2">
+            <aside class="fixed__container__wrapper text-center col-md-2 col-xs-3">
                 <div class="fixed__block">
                     <a href="#sosna">
                         <div class="navbar__item">
-                            <img src="assets/static/pages/treeBreeds/images/sosna__nav.png">
-                            <img class="sosna__current current" src="assets/static/pages/treeBreeds/images/current__icon.png">
+                            <div class="item__img__wrapper">
+                                <img src="assets/static/pages/treeBreeds/images/sosna__pattern.png">
+                                <img class="sosna__current current" src="assets/static/pages/treeBreeds/images/current__icon.png">
+                            </div>
                             <div>Сосна</div>
                         </div>
                     </a>
+                    <div class="doted text-center">
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                    </div>
                     <a href="#listvennicza">
                         <div class="navbar__item">
-                            <img src="assets/static/pages/treeBreeds/images/listvennicza__nav.png">
-                            <img class="listvennicza__current current hidden"
-                                 src="assets/static/pages/treeBreeds/images/current__icon.png">
+                            <div class="item__img__wrapper">
+                                <img src="assets/static/pages/treeBreeds/images/listvennicza__pattern.png">
+                                <img class="listvennicza__current current hidden"
+                                     src="assets/static/pages/treeBreeds/images/current__icon.png">
+                            </div>
                             <div>Лиственница</div>
                         </div>
                     </a>
+                    <div class="doted text-center">
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                        <div class="dot img-circle"></div>
+                    </div>
                     <a href="#dub">
                         <div class="navbar__item">
-                            <img src="assets/static/pages/treeBreeds/images/dub__nav.png">
-                            <img class="dub__current current hidden"
-                                 src="assets/static/pages/treeBreeds/images/current__icon.png">
+                            <div class="item__img__wrapper">
+                                <img src="assets/static/pages/treeBreeds/images/dub__pattern.png">
+                                <img class="dub__current current hidden"
+                                     src="assets/static/pages/treeBreeds/images/current__icon.png">
+                            </div>
                             <div>Дуб</div>
                         </div>
                     </a>
@@ -405,10 +420,10 @@
                 </div>
                 <div class="main">
                     <div class="columns__wrapper">
-                        <div class="breeds column text-center">
+                        <div class="breed column text-center">
                             <div class="table__header">Сосна</div>
                             <div class="img__cell">
-                                <img src="assets/static/pages/treeBreeds/images/sosna__nav.png">
+                                <img src="assets/static/pages/treeBreeds/images/sosna__pattern.png">
                             </div>
                             <div>до 6000 мм</div>
                             <div>Прямоугольный</div>
@@ -422,10 +437,10 @@
                                 <div href="#call" class="mo__btn transparent">Оставить заявку</div>
                             </div>
                         </div>
-                        <div class="breeds column text-center">
+                        <div class="breed column text-center">
                             <div class="table__header">Лиственница</div>
                             <div class="img__cell">
-                                <img src="assets/static/pages/treeBreeds/images/listvennicza__nav.png">
+                                <img src="assets/static/pages/treeBreeds/images/listvennicza__pattern.png">
                             </div>
                             <div>до 6000 мм</div>
                             <div>Прямоугольный</div>
@@ -439,10 +454,10 @@
                                 <div href="#call" class="mo__btn transparent">Оставить заявку</div>
                             </div>
                         </div>
-                        <div class="breeds column text-center">
+                        <div class="breed column text-center">
                             <div class="table__header">Дуб</div>
                             <div class="img__cell">
-                                <img src="assets/static/pages/treeBreeds/images/dub__nav.png">
+                                <img src="assets/static/pages/treeBreeds/images/dub__pattern.png">
                             </div>
                             <div>до 6000 мм</div>
                             <div>Прямоугольный</div>
