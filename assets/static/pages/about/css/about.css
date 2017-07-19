@@ -1,0 +1,31 @@
+.about {
+    padding-top: 35px;
+}
+
+.about__cell {
+    min-height: inherit;
+}
+
+.about__text__1 {
+    padding: 0 40px 40px;
+}
+
+.about__text__2 {
+    padding: 60px 40px 40px;
+    background-color: #c0c0c0;
+}
+
+.about__img {
+    padding: 0;
+    overflow: hidden;
+}
+
+.about__img img {
+    min-height: 450px;
+}
+
+@media (min-width: 992px) {
+    .about__cell {
+        min-height: 450px;
+    }
+}
