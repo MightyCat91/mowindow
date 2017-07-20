@@ -788,7 +788,8 @@ footer .prod a, footer .prod a:hover {
     }
 
     .main__info.fixed {
-        display: none;
+        /*display: none;*/
+        position: relative;
     }
 
     .main__links {

@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.sosna, .listvennicza, .dub {
+    display: inline-block;
+}
+
 .icon {
     position: absolute;
     bottom: 0;
@@ -60,12 +64,7 @@ form.descr__block {
 }
 
 .fixed__block {
-    position: absolute;
-}
-
-.fixed__block.with__sticky__menu {
     position: fixed;
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -100,11 +99,19 @@ form.descr__block {
     right: 0;
 }
 
+.fixed__container__wrapper .with__sticky__menu {
+    margin-top: 88px;
+}
+
 .dot {
-    max-width: 10px;
+    width: 10px;
     background-color: #d7d7d7;
-    min-height: 10px;
+    height: 10px;
     margin: 5px auto;
+}
+
+.dot.scrolled {
+    background-color: #7fd968;
 }
 
 .table {
@@ -185,6 +192,9 @@ form.descr__block {
 }
 
 @media (max-width: 992px) {
+    .breeds .container {
+        position: static;
+    }
     .wrapper > div {
         display: flex;
         flex-direction: column;
@@ -201,6 +211,37 @@ form.descr__block {
 
     .main .table__header {
         line-height: 2;
+    }
+
+    .fixed__container__wrapper.mobile {
+        height: inherit;
+        border-bottom: 1px solid #707070;
+    }
+
+    .fixed__container__wrapper.mobile.fixed {
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        z-index: 10;
+    }
+
+    .fixed__block {
+        display: flex;
+        position: relative;
+        max-width: 70%;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .doted {
+        display: flex;
+        align-items: center;
+        padding-bottom: 21px;
+        width: 100%;
+    }
+
+    .wrapper {
+        margin-top: 131px;
     }
 }
 
