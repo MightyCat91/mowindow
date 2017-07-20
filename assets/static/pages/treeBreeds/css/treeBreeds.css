@@ -17,10 +17,6 @@
     left: 15px;
 }
 
-.breed__type {
-    padding-left: 60px;
-}
-
 main .mo__btn.transparent {
     color: #707070;
     margin-top: 20px;
@@ -28,11 +24,6 @@ main .mo__btn.transparent {
 
 main .mo__btn.transparent:hover {
     color: #fff;
-}
-
-.specification {
-    list-style: none;
-    padding: 0;
 }
 
 .specification li {
@@ -55,21 +46,17 @@ main .mo__btn.transparent:hover {
     position: absolute;
 }
 
-form.descr__block {
-    padding-right: 40px;
-}
-
 .form-group .mo__btn {
     margin-top: 20px;
 }
 
 .fixed__block {
     position: fixed;
-    margin-bottom: 50px;
 }
 
 .fixed__block.bottom {
     bottom: 0;
+    position: absolute;
 }
 
 .fixed__block a {
@@ -191,6 +178,21 @@ form.descr__block {
     left: -15px;
 }
 
+@media (min-width: 992px) {
+    .breed__type {
+        padding-left: 60px;
+    }
+
+    .specification {
+        list-style: none;
+        padding: 0;
+    }
+
+    .descr__block {
+        padding-right: 40px;
+    }
+}
+
 @media (max-width: 992px) {
     .breeds .container {
         position: static;
@@ -274,11 +276,3 @@ form.descr__block {
         max-width: 60px;
     }
 }
-
-
-
-
-
-/*.fixed__block {*/
-    /*position: fixed;*/
-/*}*/
