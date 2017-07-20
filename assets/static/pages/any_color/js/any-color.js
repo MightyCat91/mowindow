@@ -6,6 +6,17 @@
 
     $('.fancy').fancybox();
 
+    //смена цвета текстового блока в зависимости от цвета пикселя под курсором
+    $(".pencil__area")
+        .mouseover(function () {
+            var hex = $(this).data('color');
+            $('.pencil__text__container').css('background-color', hex)
+        })
+        .on('click', function (e) {
+            e.preventDefault();
+        });
+
+
     // показ уголка соответствующего выбранному цвету
     rimmelColor.on('click', function () {
         var pushedColorId = $(this).children('img').data('id'),
@@ -30,83 +41,15 @@
         $(this).addClass('active');
     });
 
-    //$(window).on('load', function () {
-    //var canvas = $('.pencils__img')[0].getContext('2d');
-    //var img = $('.canvas__img')[0];
-    //canvas.canvas.width = img.width;
-    //canvas.canvas.height = img.height;
-    //canvas.drawImage(img, 0, 0);
-    var canvas = $('.pencils__img')[0],
-        image = new Image();
-
-    image.crossOrigin = "Anonymous";
-    image.onload = function () {
-        canvas.width = this.width;
-        canvas.height = this.height;
-        canvas.getContext('2d').drawImage(this, 0, 0);
-        canvas.toDataURL();
-        $('.canvas__img').on('click', function (e) {
-            var pixelData = canvas.getContext('2d').getImageData(543, 324, 1, 1).data;
-            var hex = "#" + ("000000" + rgbToHex(pixelData[0], pixelData[1], pixelData[2])).slice(-6);
-            console.log(hex);
-            console.log(pixelData);
-        });
-    };
-    image.src = $('.canvas__img').prop('src');
-    //});
-
-    //var canvas = $('.pencils__img')[0];
-    //paper.setup(canvas);
-    //var raster = new paper.Raster();
-    //raster.source = $('.canvas__img').prop('src');
-    //raster.visible = false;
-
-
-    //$('.canvas__img').mousemove(function (e) {
-    //var canvas = document.createElement( 'canvas'),
-    //    image = new Image();
-    //image.src = $('.canvas__img').prop('src');
-    //image.crossOrigin = "Anonymous";
-    //image.onload = function() {
-    //    canvas.width = this.width;
-    //    canvas.height = this.height;
-    //    canvas.getContext('2d').drawImage(this, 0, 0);
-    //    canvas.toDataURL();
-    //    var pixelData = canvas.getContext('2d').getImageData(e.pageX, e.pageY, 1, 1).data;
-    //    var hex = "#" + ("000000" + rgbToHex(pixelData[0], pixelData[1], pixelData[2])).slice(-6);
-    //    console.log(hex);
-    //    console.log(pixelData);
-    //};
-
-    //var canvas = $('.pencils__img')[0];
-    //    image = new Image();
-    //
-    //image.crossOrigin = "Anonymous";
-    //image.onload = function() {
-    //    canvas.width = this.width;
-    //    canvas.height = this.height;
-    //    canvas.getContext('2d').drawImage(this, 0, 0);
-    //    canvas.toDataURL();
-    //    var pixelData = canvas.getContext('2d').getImageData(e.pageX, e.pageY, 1, 1).data;
-    //    var hex = "#" + ("000000" + rgbToHex(pixelData[0], pixelData[1], pixelData[2])).slice(-6);
-    //    console.log(hex);
-    //    console.log(pixelData);
-    //};
-    //image.src = $('.canvas__img').prop('src');
-
-    //var pixelData = canvas.getContext('2d').getImageData(e.pageX, e.pageY, 1, 1).data;
-    //    var hex = "#" + ("000000" + rgbToHex(pixelData[0], pixelData[1], pixelData[2])).slice(-6);
-    //    console.log(hex);
-    //    console.log(pixelData);
-
-    //var color = raster.getPixel(e.pageX, e.pageY);
-    //console.log(e.pageX, e.pageY);
-    //console.log(color);
-    //});
-
-    function rgbToHex(r, g, b) {
-        if (r > 255 || g > 255 || b > 255)
-            throw "Invalid color component";
-        return ((r << 16) | (g << 8) | b).toString(16);
+    if ($(window).width() < 992) {
+        //инициализируем слайдер для палитры
+        $('.rimmel__palit').addClass('swiper-wrapper').parent().addClass('swiper-container');
+        $('.rimmel__color').addClass('swiper-slide');
+        $('.swiper__btn').removeClass('hidden');
+        var swiper = new Swiper('.swiper-container', {
+            nextButton: $('.swiper-button-next'),
+            prevButton: $('.swiper-button-prev')
+        })
     }
+
 })(jQuery);
