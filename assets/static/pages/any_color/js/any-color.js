@@ -6,16 +6,17 @@
 
     $('.fancy').fancybox();
 
-    //смена цвета текстового блока в зависимости от цвета пикселя под курсором
-    $(".pencil__area")
-        .mouseover(function () {
-            var hex = $(this).data('color');
-            $('.pencil__text__container').css('background-color', hex)
-        })
-        .on('click', function (e) {
-            e.preventDefault();
-        });
-
+    //смена цвета текстового блока в зависимости от цвета пикселя под курсором если не мобильное разрешение
+    if ($(window).width() > 992){
+        $(".pencil__area")
+            .mouseover(function () {
+                var hex = $(this).data('color');
+                $('.pencil__text__container').css('background-color', hex)
+            })
+            .on('click', function (e) {
+                e.preventDefault();
+            });
+    }
 
     // показ уголка соответствующего выбранному цвету
     rimmelColor.on('click', function () {
@@ -43,10 +44,11 @@
 
     if ($(window).width() < 992) {
         //инициализируем слайдер для палитры
-        $('.rimmel__palit').addClass('swiper-wrapper').parent().addClass('swiper-container');
+        $('.rimmel__palit').addClass('swiper-wrapper');
         $('.rimmel__color').addClass('swiper-slide');
         $('.swiper__btn').removeClass('hidden');
         var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 6,
             nextButton: $('.swiper-button-next'),
             prevButton: $('.swiper-button-prev')
         })

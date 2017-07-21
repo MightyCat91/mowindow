@@ -57,6 +57,8 @@ a.fancy {
 .rimmel__corner__img {
     position: relative;
     min-height: 518px;
+    display: flex;
+    justify-content: center;
 }
 
 .rimmel__corner__img img {
@@ -87,12 +89,24 @@ a.fancy {
     border: 2px solid #37b349;
 }
 
-.swiper-button-prev {
-    left: 0;
+.rimmel__paint .swiper-container {
+    margin: 0 45px;
 }
 
 .swiper__btn {
     top: 35px;
+    position: absolute;
+    width: 100%;
+}
+
+.swiper__btn .swiper-button-prev {
+    left: 0;
+    background-image: url(../images/arrow__left.png);
+}
+
+.swiper__btn .swiper-button-next {
+    right: 30px;
+    background-image: url(../images/arrow__right.png);
 }
 
 .pencils {
@@ -101,7 +115,6 @@ a.fancy {
     min-height: 410px;
     position: relative;
     overflow: hidden;
-    background-color: #160d07;
 }
 
 .pencils__img {
@@ -111,7 +124,6 @@ a.fancy {
 .canvas__img {
     position: absolute;
     max-width: none;
-    bottom: 0;
 }
 
 .pencil__area {
@@ -176,7 +188,15 @@ a.fancy {
     border: 2px solid #37b349;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 992px) {
+    .durable__painting {
+        color: #fff;
+    }
+
+    .palit__color div {
+        color: #2b2929;
+    }
+
     .pencils h2 {
         position: inherit;
         max-width: 40%;
@@ -187,6 +207,7 @@ a.fancy {
     .pencil__text__container {
         margin: 50px 50px;
         max-width: 100%;
+        background-color: #FE1579;
     }
 
     .pencils__btn {
@@ -194,26 +215,6 @@ a.fancy {
         left: inherit;
         display: table;
         margin: 0 auto 5%;
-    }
-}
-
-@media (min-width: 768px) {
-    .pencil__text__container {
-        margin: 50px calc((100vw - 750px) / 2 + 245px) 50px calc((100vw - 750px) / 2);
-    }
-
-    .pencils__btn {
-        left: calc((100vw - 750px) / 2 + 550px);
-    }
-}
-
-@media (max-width: 992px) {
-    .durable__painting {
-        color: #fff;
-    }
-
-    .palit__color div {
-        color: #2b2929;
     }
 }
 
