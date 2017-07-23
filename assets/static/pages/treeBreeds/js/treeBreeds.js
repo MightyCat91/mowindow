@@ -14,6 +14,8 @@
         //смещение блока навигации относительно начала страницы
         fixedBlockOffset = fixedBlock.offset().top;
 
+    $('.fancy').fancybox();
+
     //если ширина окна менее 992рх
     if (windowBrowser.width() < 992) {
         //инициализируем слайдер для таблицы

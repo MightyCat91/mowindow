@@ -21,4 +21,6 @@
             prevButton: $('.specification__table .swiper-button-prev')
         });
     }
+
+    $('.fancy').fancybox();
 })(jQuery);

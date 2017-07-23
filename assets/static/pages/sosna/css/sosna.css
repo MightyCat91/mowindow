@@ -1,0 +1,250 @@
+section {
+    margin-bottom: 60px;
+}
+.section__1 {
+    background: url(../images/header.jpg) no-repeat 50%/cover;
+}
+
+.text__block {
+    background: rgba(25,56,0,.8);
+    margin-top: 60px;
+    margin-bottom: 100px;
+    color: #fff;
+}
+
+.text__block .h2 {
+    margin-top: 40px;
+}
+
+.text__block p {
+    margin-bottom: 40px;
+}
+
+.section__2 .descr__block:first-child .accent, .section__5 .accent:first-child {
+    margin-top: 0;
+    display: block;
+}
+
+.specification {
+    list-style: none;
+    padding: 0;
+}
+
+.specification li {
+    border-bottom: 1px dotted;
+    position: relative;
+}
+
+.specification li span {
+    background-color: #fff;
+    bottom: -7px;
+    padding: 0 2px 5px;
+}
+
+.key {
+    text-align: left;
+}
+
+.value {
+    right: 0;
+    position: absolute;
+}
+
+section:not(.section__4) .mo__btn {
+    margin: 40px 0;
+    color: #707070;
+}
+
+section:not(.section__4) .mo__btn.transparent:hover {
+    color: #fff;
+}
+
+.section__3 h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.section__3 .accent {
+    margin-bottom: 0;
+}
+
+.section__3 h4 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.section__3 p {
+    margin-bottom: 40px;
+}
+
+.section__4 {
+    color: #fff;
+    background-size: cover;
+    min-height: 410px;
+    position: relative;
+    overflow: hidden;
+}
+
+.canvas__img {
+    position: absolute;
+    max-width: none;
+}
+
+.pencil__area {
+    cursor: default;
+}
+
+.section__4 h2 {
+    position: inherit;
+    display: table;
+    margin: 60px auto 0;
+}
+
+.pencil__text__container {
+    background-color: #a5b900;
+    padding: 30px 20px;
+    position: inherit;
+    margin: 50px calc((100vw - 1170px) / 2 + 245px) 50px calc((100vw - 1170px) / 2);
+}
+
+.pencils__btn {
+    position: absolute;
+    top: 50%;
+    left: calc((100vw - 1170px) / 2 + 970px);
+}
+
+.align__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.img__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.img__wrapper div {
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 20px;
+}
+.image__icon {
+    width: 105px;
+}
+
+.img__wrapper .snow__sun__text {
+    font-size: 16px;
+    width: 105px;
+    margin-left: 0;
+}
+
+.img__wrapper div:first-child {
+    color: #1759a7;
+}
+
+.img__wrapper div:last-child {
+    color: #eb1c23;
+}
+
+.img__wrapper div.snow__text {
+    color: #eb1c23;
+    margin-right: 10px;
+}
+
+.img__wrapper div.sun__text {
+    color: #1759a7;
+    margin-right: 10px;
+}
+
+.toggle__wrapper {
+    display: flex;
+}
+
+.toggle__wrapper img {
+    max-width: 30px;
+    margin: 0 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 58px;
+    margin: 0;
+    height: 30px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background-color: #ededed;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    bottom: -2px;
+    background-color: #707070;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.steklopaket__btn {
+    display: flex;
+    justify-content: center;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(34px);
+    -ms-transform: translateX(34px);
+    transform: translateX(34px);
+}
+
+@media (max-width: 992px) {
+    .section__4 h2 {
+        position: inherit;
+        max-width: 40%;
+        text-align: center;
+        margin: 10% auto 0;
+    }
+
+    .pencil__text__container {
+        margin: 50px 50px;
+        max-width: 100%;
+        background-color: #FE1579;
+    }
+
+    .pencils__btn {
+        position: inherit;
+        left: inherit;
+        display: table;
+        margin: 0 auto 5%;
+    }
+
+    .types div {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .pencil__text__container {
+        margin: 50px calc((100vw - 970px) / 2 + 245px) 50px calc((100vw - 970px) / 2);
+    }
+
+    .pencils__btn {
+        left: calc((100vw - 970px) / 2 + 770px);
+    }
+}
