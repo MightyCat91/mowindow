@@ -212,17 +212,9 @@ input:checked + .slider:before {
 }
 
 @media (min-width: 992px) {
-    .breed__type {
-        padding-left: 60px;
-    }
-
     .specification {
         list-style: none;
         padding: 0;
-    }
-
-    .descr__block {
-        padding-right: 40px;
     }
 }
 
@@ -231,14 +223,6 @@ input:checked + .slider:before {
         width: 12px;
         top: 35px;
         height: 19px;
-    }
-
-    .breed__img {
-        width: inherit;
-    }
-
-    .breed__type {
-        padding-left: 0;
     }
 
     .main .table__header {

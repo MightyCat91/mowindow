@@ -1,0 +1,144 @@
+section {
+    margin-bottom: 60px;
+}
+
+.section__1 {
+    background: url(../images/header.png) no-repeat 0 #cacaca;
+}
+
+.descr__block:first-child .accent {
+    margin-top: 0;
+}
+
+.descr__block .mo__btn {
+    margin: 40px 0;
+    color: #707070;
+}
+
+.descr__block .mo__btn:hover {
+    color: #fff;
+}
+
+.specification {
+    list-style: none;
+    padding: 0;
+}
+
+.specification li {
+    border-bottom: 1px dotted;
+    position: relative;
+}
+
+.specification li span {
+    background-color: #fff;
+    bottom: -7px;
+    padding: 0 2px 5px;
+}
+
+.key {
+    text-align: left;
+}
+
+.value {
+    right: 0;
+    position: absolute;
+}
+
+
+
+.table {
+    display: flex;
+}
+
+.params {
+    min-width: 30%;
+}
+
+.main {
+    min-width: 70%;
+    display: flex;
+}
+
+.columns__wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    min-width: calc(100%/3);
+}
+
+.specification__table .table__header {
+    background-color: #b7b7b7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 10px;
+    line-height: 1;
+}
+
+.column > div {
+    padding: 15px;
+    border-bottom: 1px solid #b7b7b7;
+}
+
+.column > div:last-child {
+    border-bottom: 8px solid #b7b7b7;
+    border-bottom: none;
+}
+
+.img__cell {
+    height: 211px;
+}
+
+.main .img__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev {
+    background: url(../images/left__arrow.png);
+}
+
+.swiper-button-next {
+    background: url(../images/right__arrow.png);
+}
+
+.specification__table .mo__btn.transparent {
+    color: #707070;
+}
+
+.specification__table .mo__btn.transparent:hover {
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    .specification {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .swiper__btn {
+        width: 12px;
+        top: 35px;
+        height: 19px;
+    }
+
+    .main .table__header {
+        line-height: 2;
+    }
+}
+
+@media (max-width: 524px) {
+    .swiper__btn {
+        top: 40px;
+    }
+    .main .table__header {
+        line-height: 3;
+    }
+}
