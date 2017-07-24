@@ -12,11 +12,20 @@ section {
 
 .wrapper > div {
     display: inline-block;
+    /*position: relative;*/
 }
 
 .image {
     margin-bottom: 40px;
 }
+
+/*.image.fixed {*/
+    /*position: fixed;*/
+/*}*/
+
+/*.image.bottom {*/
+    /*position: fixed;*/
+/*}*/
 
 .descr__block:first-child .accent {
     margin-top: 0;
@@ -160,11 +169,12 @@ section {
 }
 
 .navbar__item {
-    padding: 15px 20px;
+    padding: 15px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    min-width: 130px;
 }
 
 .navbar__item:hover {
@@ -181,10 +191,6 @@ section {
     right: 0;
 }
 
-.fixed__container__wrapper .with__sticky__menu {
-    /*margin-top: 88px;*/
-}
-
 .dot {
     width: 10px;
     background-color: #d7d7d7;
@@ -198,8 +204,8 @@ section {
 
 .current {
     position: absolute;
-    bottom: 0;
-    left: -15px;
+    bottom: 35px;
+    left: 15px;
 }
 
 @media (min-width: 992px) {
@@ -214,6 +220,10 @@ section {
 }
 
 @media (max-width: 992px) {
+    .section__1 {
+        margin-bottom: 0;
+    }
+
     .swiper__btn {
         width: 12px;
         top: 35px;
@@ -226,6 +236,10 @@ section {
 
     .description {
         padding-left: 0;
+    }
+
+    .wrapper {
+        margin-top: 135px;
     }
 
     .fixed__container__wrapper.mobile {
@@ -243,7 +257,7 @@ section {
     .fixed__block {
         display: flex;
         position: relative;
-        max-width: 70%;
+        max-width: 90%;
         justify-content: space-around;
         margin: 0 auto;
     }
