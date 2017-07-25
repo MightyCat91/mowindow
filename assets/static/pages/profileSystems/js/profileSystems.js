@@ -41,31 +41,31 @@
         //блок фиксированного изображения
             fixedImageBlock__1 = containerFixedImageBlock__1.find('.image__fixed__block'),
         //смещение блока изображения относительно начала страницы
-            offsetImageFixedBlock__1 = fixedImageBlock__1.offset().top - 90,
+            offsetContainerFixedImageBlock__1 = containerFixedImageBlock__1.offset().top - 90,
         //нижняя граница блока изображения
             bottomImageFixedBlock__1 = windowTop + fixedImageBlock__1.height(),
         //нижняя граница контейнера блока фиксированного изображения
-            bottomContainerFixedBlock__1 = containerFixedImageBlock__1.offset().top + containerFixedImageBlock__1.height(),
+            bottomContainerImageFixedBlock__1 = containerFixedImageBlock__1.offset().top + containerFixedImageBlock__1.height() - 100,
         //контейнер блока фиксированного изображения
             containerFixedImageBlock__2 = $('.profile__2 .image__container'),
         //блок фиксированного изображения
             fixedImageBlock__2 = containerFixedImageBlock__2.find('.image__fixed__block'),
         //смещение блока изображения относительно начала страницы
-            offsetImageFixedBlock__2 = fixedImageBlock__2.offset().top - 90,
+            offsetContainerFixedImageBlock__2 = containerFixedImageBlock__2.offset().top - 90,
         //нижняя граница блока изображения
             bottomImageFixedBlock__2 = windowTop + fixedImageBlock__2.height(),
         //нижняя граница контейнера блока фиксированного изображения
-            bottomContainerFixedBlock__2 = containerFixedImageBlock__2.offset().top + containerFixedImageBlock__2.height(),
+            bottomContainerImageFixedBlock__2 = containerFixedImageBlock__2.offset().top + containerFixedImageBlock__2.height() - 100,
         //контейнер блока фиксированного изображения
             containerFixedImageBlock__3 = $('.profile__3 .image__container'),
         //блок фиксированного изображения
             fixedImageBlock__3 = containerFixedImageBlock__3.find('.image__fixed__block'),
         //смещение блока изображения относительно начала страницы
-            offsetImageFixedBlock__3 = fixedImageBlock__3.offset().top - 90,
+            offsetContainerFixedImageBlock__3 = containerFixedImageBlock__3.offset().top - 90,
         //нижняя граница блока изображения
             bottomImageFixedBlock__3 = windowTop + fixedImageBlock__3.height(),
         //нижняя граница контейнера блока фиксированного изображения
-            bottomContainerFixedBlock__3 = containerFixedImageBlock__3.offset().top + containerFixedImageBlock__3.height(),
+            bottomContainerImageFixedBlock__3 = containerFixedImageBlock__3.offset().top + containerFixedImageBlock__3.height() - 100,
         //нижняя граница блока быстрой навигации
             bottomFixed = windowTop + fixedBlock.height(),
         //нижняя граница контейнера блока быстрой навигации - отступ
@@ -78,8 +78,12 @@
             block__2__Offset = block__2.offset().top,
         //высота блока "Алю"
             block__2__Height = block__2.height(),
+        //смещение блока "Классик" относительно начала страницы
+            block__3__Offset = block__3.offset().top,
+        //высота блока "Классик"
+            block__3__Height = block__3.height(),
         //части высоты блоков "Стандарт", "Алю", "Классик" соответсвующие точкам в блоке быстрой навигации
-            dot = [0, 1 / 5, 2 / 5, 3 / 5, 4 / 5, 1];
+            dot = [0, 1 / 5, 2 / 5, 3 / 5, 4 / 5];
 
         //если текущее разрешение - мобильное
         if (fixedContainer.hasClass('mobile')) {
@@ -98,55 +102,39 @@
             });
             //установка контейнеру блока быстрой навигации высоты равной высоте сейкции контента без таблицы
             fixedContainer.height(sectionHeight.height());
-            //если скролл страницы меньше высоты меню + высоты первого региона с формой + 1рх(для отсутсвия скачков)
-            if (windowTop < 430) {
+            //211 = высота нефиксированного меню + нижний отступ секции__1 + верхний отступ у блока навигации
+            positioning(fixedBlock, fixedBlockOffset - 211, bottomFixed, bottomFixedContainer);
+            positioning(fixedImageBlock__1, offsetContainerFixedImageBlock__1, bottomImageFixedBlock__1, bottomContainerImageFixedBlock__1);
+            positioning(fixedImageBlock__2, offsetContainerFixedImageBlock__2, bottomImageFixedBlock__2, bottomContainerImageFixedBlock__2);
+            positioning(fixedImageBlock__3, offsetContainerFixedImageBlock__3, bottomImageFixedBlock__3, bottomContainerImageFixedBlock__3);
+        }
+
+        /*
+         * Позиционирование фиксируемого блока
+         * fixedBlock - фиксируемый блок
+         * fixedBlockOffset - смещение фиксируемого блока относительно начала страницы
+         * bottomFixedBlock - нижняя граница фиксируемого блока
+         * bottomFixedContainer - нижняя граница контейнера фиксируемого блока
+         */
+        function positioning(fixedBlock, fixedBlockOffset, bottomFixedBlock, bottomFixedContainer) {
+            //если текущий скролл меньше верхней границы фиксируемого блока
+            if (windowTop < fixedBlockOffset) {
+                //позиционируем блок абсолютно
                 fixedBlock.removeClass('fixed');
             }
             else {
+                //позиционируем блок фиксированно
                 fixedBlock.addClass('fixed');
-                //если нижняя граница блока навигации больше или равна нижней границе контейнера блока навигации
-                if (bottomFixed >= bottomFixedContainer) {
-                    //устанавливаем блоку навигации абсолютное позициониование и прижимаем к низу контейнера
+                //если нижняя граница фиксируемого блока больше или равна нижней границе его контейнера
+                if (bottomFixedBlock >= bottomFixedContainer) {
+                    //устанавливаем блоку абсолютное позициониование и прижимаем к низу контейнера
                     fixedBlock.addClass('bottom');
                     fixedBlock.removeClass('fixed');
                 } else {
-                    //устанавливаем блоку навигации фиксированное позиционирование
+                    //устанавливаем блоку фиксированное позиционирование
                     fixedBlock.removeClass('bottom');
                 }
             }
-            console.log(windowTop,offsetImageFixedBlock__1);
-
-            if (windowTop > offsetImageFixedBlock__1) {
-                fixedImageBlock__1.addClass('fixed');
-                if (bottomImageFixedBlock__1 >= bottomContainerFixedBlock__1) {
-                    //устанавливаем блоку изображения абсолютное позициониование и прижимаем к низу контейнера
-                    //fixedImageBlock__1.addClass('bottom');
-                    //fixedImageBlock__1.removeClass('fixed');
-                } else {
-                    //устанавливаем блоку изображения фиксированное позиционирование
-                    //fixedImageBlock__1.removeClass('bottom');
-                }
-            } else {
-                fixedImageBlock__1.removeClass('fixed');
-            }
-
-            //$('.profile').map(function (index, value) {
-            //    var imgBlock = $(value).find('.image__fixed__block');
-            //    if (windowTop > offsetImageFixedBlock) {
-            //        imgBlock.addClass('fixed');
-            //        console.log(windowTop,offsetImageFixedBlock,$(value));
-            //        if (bottomImageFixedBlock >= bottomContainerFixedBlock) {
-            //            //устанавливаем блоку изображения абсолютное позициониование и прижимаем к низу контейнера
-            //            imgBlock.addClass('bottom');
-            //            imgBlock.removeClass('fixed');
-            //        } else {
-            //            //устанавливаем блоку изображения фиксированное позиционирование
-            //            imgBlock.removeClass('bottom');
-            //        }
-            //    } else {
-            //        imgBlock.removeClass('fixed');
-            //    }
-            //});
         }
 
         //для каждой части высоты блоков "сосна","лиственница","дуб"
@@ -155,6 +143,7 @@
             dotScrolled('profile__1', block__1__Offset, block__1__Height, index, element);
             //между кнопками "лиственница" и "дуб"
             dotScrolled('profile__2', block__2__Offset, block__2__Height, index, element);
+            dotScrolled('profile__3', block__3__Offset, block__3__Height, index, element);
         });
 
         /*
@@ -170,15 +159,20 @@
             // высоты окна
             if (windowTop > (blockOffset + blockHeight * ratio - windowBrowser.height() / 2)) {
                 $('.' + selectorClass + '__doted .dot:eq(' + index + ')').addClass('scrolled');
-                imgScrolled(selectorClass, index + 1);
+                imgScrolled(selectorClass, index);
             } else {
                 $('.' + selectorClass + '__doted .dot:eq(' + index + ')').removeClass('scrolled');
             }
         }
 
+        /*
+         * Смена изображения при скролле
+         * selectorClass - класс блока изображений
+         * index - индекс изображения
+         */
         function imgScrolled(selectorClass, index) {
-            $('.' + selectorClass + ' .image img').addClass('hidden');
-            $('.' + selectorClass + ' .image img:eq(' + index + ')').removeClass('hidden');
+            $('.' + selectorClass + ' .image__container img').addClass('hidden');
+            $('.' + selectorClass + ' .image__container img:eq(' + index + ')').removeClass('hidden');
         }
 
         //если текущий скролл больше смещения блока "Классик" за вычетом половины высоты окна

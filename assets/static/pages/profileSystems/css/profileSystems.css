@@ -16,7 +16,7 @@ section {
 
 .wrapper > div {
     display: inline-block;
-    /*position: relative;*/
+    position: relative;
 }
 
 .image__container {
@@ -25,10 +25,12 @@ section {
 
 .image__fixed__block {
     position: absolute;
+    max-width: 360px;
 }
 
 .image__fixed__block.fixed {
     position: fixed;
+    top: 100px;
 }
 
 .image__fixed__block.bottom {
@@ -243,6 +245,11 @@ section {
         margin-bottom: 0;
     }
 
+    .image__fixed__block {
+        position: relative;
+        max-width: 100%;
+    }
+
     .swiper__btn {
         width: 12px;
         top: 35px;
@@ -286,6 +293,10 @@ section {
         align-items: center;
         padding-bottom: 21px;
         width: 100%;
+    }
+
+    .dot {
+        margin: 5px;
     }
 }
 

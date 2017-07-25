@@ -235,6 +235,10 @@ main .mo__btn.transparent:hover {
         margin: 0 auto;
     }
 
+    .callback__form {
+        display: none;
+    }
+
     .doted {
         display: flex;
         align-items: center;
