@@ -109,45 +109,6 @@ a.fancy {
     background-image: url(../images/arrow__right.png);
 }
 
-.pencils {
-    color: #fff;
-    background-size: cover;
-    min-height: 410px;
-    position: relative;
-    overflow: hidden;
-}
-
-.pencils__img {
-    position: absolute;
-}
-
-.canvas__img {
-    position: absolute;
-    max-width: none;
-}
-
-.pencil__area {
-    cursor: default;
-}
-
-.pencils h2 {
-    position: inherit;
-    display: table;
-    margin: 60px auto 0;
-}
-
-.pencil__text__container {
-    background-color: #a5b900;
-    padding: 30px 20px;
-    position: inherit;
-    margin: 50px calc((100vw - 1170px) / 2 + 245px) 50px calc((100vw - 1170px) / 2);
-}
-
-.pencils__btn {
-    position: absolute;
-    top: 50%;
-    left: calc((100vw - 1170px) / 2 + 970px);
-}
 .window__container {
     position: relative;
     min-height: 570px;
@@ -159,6 +120,10 @@ a.fancy {
 
 .window__container img {
     position: absolute;
+}
+
+.handle__selection {
+    display: flex;
 }
 
 .handle__selection > div:last-child {
@@ -195,35 +160,5 @@ a.fancy {
 
     .palit__color div {
         color: #2b2929;
-    }
-
-    .pencils h2 {
-        position: inherit;
-        max-width: 40%;
-        text-align: center;
-        margin: 10% auto 0;
-    }
-
-    .pencil__text__container {
-        margin: 50px 50px;
-        max-width: 100%;
-        background-color: #FE1579;
-    }
-
-    .pencils__btn {
-        position: inherit;
-        left: inherit;
-        display: table;
-        margin: 0 auto 5%;
-    }
-}
-
-@media (min-width: 992px) {
-    .pencil__text__container {
-        margin: 50px calc((100vw - 970px) / 2 + 245px) 50px calc((100vw - 970px) / 2);
-    }
-
-    .pencils__btn {
-        left: calc((100vw - 970px) / 2 + 770px);
     }
 }

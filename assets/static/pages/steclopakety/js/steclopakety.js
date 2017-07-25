@@ -22,5 +22,8 @@
         });
     }
 
-    $('.fancy').fancybox();
+    // установка высоты блока описания равной высоте блока изображения
+    $('.description').map(function () {
+        $(this).height($(this).parent('.container').find('.image').height());
+    });
 })(jQuery);

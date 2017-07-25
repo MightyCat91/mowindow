@@ -10,13 +10,30 @@ section {
     margin: 40px 0;
 }
 
+.section__2 .container {
+    position: relative;
+}
+
 .wrapper > div {
     display: inline-block;
     /*position: relative;*/
 }
 
-.image {
+.image__container {
     margin-bottom: 40px;
+}
+
+.image__fixed__block {
+    position: absolute;
+}
+
+.image__fixed__block.fixed {
+    position: fixed;
+}
+
+.image__fixed__block.bottom {
+    position: absolute;
+    bottom: 0;
 }
 
 /*.image.fixed {*/
@@ -189,6 +206,8 @@ section {
     height: 100%;
     position: absolute;
     right: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .dot {

@@ -4,20 +4,6 @@
     // селектор палитры цветов ручек
     var handleColor = $('.handle__color');
 
-    $('.fancy').fancybox();
-
-    //смена цвета текстового блока в зависимости от цвета пикселя под курсором если не мобильное разрешение
-    if ($(window).width() > 992){
-        $(".pencil__area")
-            .mouseover(function () {
-                var hex = $(this).data('color');
-                $('.pencil__text__container').css('background-color', hex)
-            })
-            .on('click', function (e) {
-                e.preventDefault();
-            });
-    }
-
     // показ уголка соответствующего выбранному цвету
     rimmelColor.on('click', function () {
         var pushedColorId = $(this).children('img').data('id'),

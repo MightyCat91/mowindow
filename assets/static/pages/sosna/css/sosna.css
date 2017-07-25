@@ -87,32 +87,10 @@ section:not(.section__4) .mo__btn.transparent:hover {
     overflow: hidden;
 }
 
-.canvas__img {
-    position: absolute;
-    max-width: none;
-}
-
-.pencil__area {
-    cursor: default;
-}
-
 .section__4 h2 {
     position: inherit;
     display: table;
     margin: 60px auto 0;
-}
-
-.pencil__text__container {
-    background-color: #a5b900;
-    padding: 30px 20px;
-    position: inherit;
-    margin: 50px calc((100vw - 1170px) / 2 + 245px) 50px calc((100vw - 1170px) / 2);
-}
-
-.pencils__btn {
-    position: absolute;
-    top: 50%;
-    left: calc((100vw - 1170px) / 2 + 970px);
 }
 
 .align__center {
@@ -221,30 +199,7 @@ input:checked + .slider:before {
         margin: 10% auto 0;
     }
 
-    .pencil__text__container {
-        margin: 50px 50px;
-        max-width: 100%;
-        background-color: #FE1579;
-    }
-
-    .pencils__btn {
-        position: inherit;
-        left: inherit;
-        display: table;
-        margin: 0 auto 5%;
-    }
-
     .types div {
         margin-bottom: 20px;
-    }
-}
-
-@media (min-width: 992px) {
-    .pencil__text__container {
-        margin: 50px calc((100vw - 970px) / 2 + 245px) 50px calc((100vw - 970px) / 2);
-    }
-
-    .pencils__btn {
-        left: calc((100vw - 970px) / 2 + 770px);
     }
 }

@@ -36,6 +36,36 @@
         var windowTop = $(this).scrollTop(),
         //контейнер контента, к которому прявазан блок быстрой навигации
             sectionHeight = $('.wrapper'),
+        //контейнер блока фиксированного изображения
+            containerFixedImageBlock__1 = $('.profile__1 .image__container'),
+        //блок фиксированного изображения
+            fixedImageBlock__1 = containerFixedImageBlock__1.find('.image__fixed__block'),
+        //смещение блока изображения относительно начала страницы
+            offsetImageFixedBlock__1 = fixedImageBlock__1.offset().top - 90,
+        //нижняя граница блока изображения
+            bottomImageFixedBlock__1 = windowTop + fixedImageBlock__1.height(),
+        //нижняя граница контейнера блока фиксированного изображения
+            bottomContainerFixedBlock__1 = containerFixedImageBlock__1.offset().top + containerFixedImageBlock__1.height(),
+        //контейнер блока фиксированного изображения
+            containerFixedImageBlock__2 = $('.profile__2 .image__container'),
+        //блок фиксированного изображения
+            fixedImageBlock__2 = containerFixedImageBlock__2.find('.image__fixed__block'),
+        //смещение блока изображения относительно начала страницы
+            offsetImageFixedBlock__2 = fixedImageBlock__2.offset().top - 90,
+        //нижняя граница блока изображения
+            bottomImageFixedBlock__2 = windowTop + fixedImageBlock__2.height(),
+        //нижняя граница контейнера блока фиксированного изображения
+            bottomContainerFixedBlock__2 = containerFixedImageBlock__2.offset().top + containerFixedImageBlock__2.height(),
+        //контейнер блока фиксированного изображения
+            containerFixedImageBlock__3 = $('.profile__3 .image__container'),
+        //блок фиксированного изображения
+            fixedImageBlock__3 = containerFixedImageBlock__3.find('.image__fixed__block'),
+        //смещение блока изображения относительно начала страницы
+            offsetImageFixedBlock__3 = fixedImageBlock__3.offset().top - 90,
+        //нижняя граница блока изображения
+            bottomImageFixedBlock__3 = windowTop + fixedImageBlock__3.height(),
+        //нижняя граница контейнера блока фиксированного изображения
+            bottomContainerFixedBlock__3 = containerFixedImageBlock__3.offset().top + containerFixedImageBlock__3.height(),
         //нижняя граница блока быстрой навигации
             bottomFixed = windowTop + fixedBlock.height(),
         //нижняя граница контейнера блока быстрой навигации - отступ
@@ -49,7 +79,7 @@
         //высота блока "Алю"
             block__2__Height = block__2.height(),
         //части высоты блоков "Стандарт", "Алю", "Классик" соответсвующие точкам в блоке быстрой навигации
-            dot = [0, 1/5, 2/5, 3/5, 4/5, 1];
+            dot = [0, 1 / 5, 2 / 5, 3 / 5, 4 / 5, 1];
 
         //если текущее разрешение - мобильное
         if (fixedContainer.hasClass('mobile')) {
@@ -62,6 +92,11 @@
                 fixedContainer.removeClass('fixed');
             }
         } else {
+            //установка контейнеру изображения высоты равной высоте контента для этого блока
+            $('.profile .image__container').map(function () {
+                $(this).height($(this).next().height());
+            });
+            //установка контейнеру блока быстрой навигации высоты равной высоте сейкции контента без таблицы
             fixedContainer.height(sectionHeight.height());
             //если скролл страницы меньше высоты меню + высоты первого региона с формой + 1рх(для отсутсвия скачков)
             if (windowTop < 430) {
@@ -79,13 +114,39 @@
                     fixedBlock.removeClass('bottom');
                 }
             }
-            //if (windowTop >= $('.profile__1 .image').offset().top - $('.main__info').height()) {
-            //    $('.profile__1 .image').addClass('fixed');
-            //    if (windowTop >= $('.profile__1 .image').offset().top - $('.main__info').height() +
-            //        $('.profile__1 .image').height()) {
-            //        $('.profile__1 .image').removeClass('fixed').addClass('bottom');
+            console.log(windowTop,offsetImageFixedBlock__1);
+
+            if (windowTop > offsetImageFixedBlock__1) {
+                fixedImageBlock__1.addClass('fixed');
+                if (bottomImageFixedBlock__1 >= bottomContainerFixedBlock__1) {
+                    //устанавливаем блоку изображения абсолютное позициониование и прижимаем к низу контейнера
+                    //fixedImageBlock__1.addClass('bottom');
+                    //fixedImageBlock__1.removeClass('fixed');
+                } else {
+                    //устанавливаем блоку изображения фиксированное позиционирование
+                    //fixedImageBlock__1.removeClass('bottom');
+                }
+            } else {
+                fixedImageBlock__1.removeClass('fixed');
+            }
+
+            //$('.profile').map(function (index, value) {
+            //    var imgBlock = $(value).find('.image__fixed__block');
+            //    if (windowTop > offsetImageFixedBlock) {
+            //        imgBlock.addClass('fixed');
+            //        console.log(windowTop,offsetImageFixedBlock,$(value));
+            //        if (bottomImageFixedBlock >= bottomContainerFixedBlock) {
+            //            //устанавливаем блоку изображения абсолютное позициониование и прижимаем к низу контейнера
+            //            imgBlock.addClass('bottom');
+            //            imgBlock.removeClass('fixed');
+            //        } else {
+            //            //устанавливаем блоку изображения фиксированное позиционирование
+            //            imgBlock.removeClass('bottom');
+            //        }
+            //    } else {
+            //        imgBlock.removeClass('fixed');
             //    }
-            //}
+            //});
         }
 
         //для каждой части высоты блоков "сосна","лиственница","дуб"
@@ -109,7 +170,7 @@
             // высоты окна
             if (windowTop > (blockOffset + blockHeight * ratio - windowBrowser.height() / 2)) {
                 $('.' + selectorClass + '__doted .dot:eq(' + index + ')').addClass('scrolled');
-                imgScrolled(selectorClass, index+1);
+                imgScrolled(selectorClass, index + 1);
             } else {
                 $('.' + selectorClass + '__doted .dot:eq(' + index + ')').removeClass('scrolled');
             }
@@ -144,8 +205,8 @@
     fixedBlock.children('a').on('click', function () {
         event.preventDefault();
         //смещение блока с якорем относительно начала страницы - высоты меню с запасом
-        var target_top= $('.'+this.href.split("#")[1]+'').offset().top - 150;
+        var target_top = $('.' + this.href.split("#")[1] + '').offset().top - 150;
         //анимация скролла
-        $('html, body').animate({scrollTop:target_top}, 'slow');
+        $('html, body').animate({scrollTop: target_top}, 'slow');
     });
 })(jQuery);
