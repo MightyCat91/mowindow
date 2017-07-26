@@ -1,0 +1,18 @@
+.s_item.s {
+    transform: matrix(1, .2, 0, 1, 5, -81);
+}
+.s_item.r {
+    transform: matrix(.5, -.8, 1, .5, 168, -185);
+}
+.s_item.br {
+    transform: matrix(.1, 1, 1.1, .1, 72, -228);
+}
+.s_item.o {
+    transform: matrix(.7, .5, -.7, .6, -69, -162);
+}
+.s_item.g {
+    transform: matrix(.2, 1, 1, -.1, 58, -291);
+}
+.s_item.b {
+    transform: matrix(.8, .3, -.3, .8, -132, -95);
+}

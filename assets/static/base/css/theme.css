@@ -165,7 +165,7 @@ input[type="text"], input[type="tel"] {
 
 header {
     border-bottom: 2px solid #37b349;
-}    
+}
 
 .main__info.fixed {
     position: fixed;
@@ -349,20 +349,20 @@ div > ymaps {
 
 .out__t,
 .our__t__slider__container {
-  position: relative;
+    position: relative;
 }
 
 .our__t__slider__content {
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 100px;
-  transform: translateX(-50%);
-  z-index: 2;
-  width: 100%;
-  padding: 0 75px;
-  max-width: 915px;
-  pointer-events: none;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100%;
+    padding: 0 75px;
+    max-width: 915px;
+    pointer-events: none;
 }
 
 .our__t__slider__content .slide__slogan {
@@ -637,7 +637,7 @@ footer .prod a, footer .prod a:hover {
     .hidden__lg {
         display: none;
     }
-    
+
     .main__call {
         position: relative;
         top: 35px;
@@ -709,6 +709,7 @@ footer .prod a, footer .prod a:hover {
         font-size: 12px;
     }
 
+    nav > ul > li.menu__item:not(.parent).active a:after,
     nav > ul > li.menu__item:not(.parent):hover a:after {
         content: '';
         position: absolute;
@@ -733,7 +734,7 @@ footer .prod a, footer .prod a:hover {
 
     .packages__w h2 {
         margin-top: 75px;
-    }    
+    }
 
     .row.nogutter {
         display: flex;
@@ -788,8 +789,7 @@ footer .prod a, footer .prod a:hover {
     }
 
     .main__info.fixed {
-        /*display: none;*/
-        position: relative;
+        display: none;
     }
 
     .main__links {
@@ -802,7 +802,7 @@ footer .prod a, footer .prod a:hover {
 
     .main__links__worktime {
         font-size: 12px;
-    }   
+    }
 
     nav {
         /* display: none; */
@@ -917,9 +917,9 @@ footer .prod a, footer .prod a:hover {
         height: 40px;
         padding-right: 40px;
         line-height: 35px;
-        background: url(/assets/static/img/misc/menu_ico.png) 100% 5px no-repeat;
+        background: url(../../img/misc/menu_ico.png) 100% 5px no-repeat;
     }
-    
+
     #scrollable {
         height: 420px;
     }
@@ -934,7 +934,7 @@ footer .prod a, footer .prod a:hover {
         padding:0 0 20px 0;
         margin-top: -40px;
     }
-    
+
     .our__t__slider__content {
         text-align: center;
     }
@@ -943,7 +943,7 @@ footer .prod a, footer .prod a:hover {
         text-align: center;
         visibility: hidden;
         margin-bottom: -300px;
-        
+
     }
 
     .adv {
@@ -955,11 +955,10 @@ footer .prod a, footer .prod a:hover {
     }
 
     .design {
-        background: url(/assets/static/img/pages/main/design_left.png) 0 100% no-repeat;
+        background: url(../../img/pages/main/design_left.png) 0 100% no-repeat;
         padding-bottom: 270px;
     }
 
-    
     .colours,
     .contacts {
         text-align: center;
@@ -998,12 +997,12 @@ footer .prod a, footer .prod a:hover {
     .swiper-container.customize .slide__content {
         padding: 25px 15px;
     }
-    
+
     .our__t__slider__content .slide__slogan {
         font-size: 25px;
         line-height: 45px;
-    }    
-    
+    }
+
     .our__pr .swiper-slide img {
         max-width: 100%;
     }
