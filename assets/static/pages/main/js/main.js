@@ -35,9 +35,20 @@
             });
 
         $(window).paroller();
+    });
 
+    $(window).scroll(function() {
+        var section = $('.colours'),
+            sectionTop = section.offset().top - section.height()/2,
+            sectionBottom = sectionTop + section.height()/2,
+            windowTop = $(window).scrollTop(),
+            windowBottom = windowTop + $(window).height();
 
-
-
+        if (windowBottom >= sectionBottom) {
+            $('.sc__wrap').removeClass('start');
+        }
+        if (windowTop <= sectionTop) {
+            $('.sc__wrap').addClass('start');
+        }
     });
 })(jQuery);
