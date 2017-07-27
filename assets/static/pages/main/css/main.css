@@ -11,7 +11,7 @@
     transform: matrix(.7, .5, -.7, .6, -69, -162);
 }
 .start > .s_item.g {
-    transform: matrix(.2, 1, 1, -.1, 58, -291);
+    transform: matrix(1, .1, .5, .65, 0, -143);
 }
 .start > .s_item.b {
     transform: matrix(.8, .3, -.3, .8, -132, -95);

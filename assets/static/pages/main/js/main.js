@@ -37,18 +37,18 @@
         $(window).paroller();
     });
 
-    $(window).scroll(function() {
-        var section = $('.colours'),
-            sectionTop = section.offset().top - section.height()/2,
-            sectionBottom = sectionTop + section.height()/2,
-            windowTop = $(window).scrollTop(),
-            windowBottom = windowTop + $(window).height();
 
-        if (windowBottom >= sectionBottom) {
+    var section = $('.colours'),
+        scrollDirection = $(window).scrollTop();
+    $(window).scroll(function() {
+        var sectionTop = section.offset().top,
+            windowTop = $(window).scrollTop();
+        if (windowTop >= sectionTop - section.height() && windowTop > scrollDirection) {
             $('.sc__wrap').removeClass('start');
         }
-        if (windowTop <= sectionTop) {
+        if (windowTop <= sectionTop && windowTop < scrollDirection) {
             $('.sc__wrap').addClass('start');
         }
+        scrollDirection = windowTop;
     });
 })(jQuery);
