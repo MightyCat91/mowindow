@@ -38,17 +38,14 @@
     });
 
 
-    var section = $('.colours'),
-        scrollDirection = $(window).scrollTop();
     $(window).scroll(function() {
-        var sectionTop = section.offset().top,
-            windowTop = $(window).scrollTop();
-        if (windowTop >= sectionTop - section.height() && windowTop > scrollDirection) {
+        var section = $('.colours'),
+            sectionTop = section.offset().top,
+            windowTop = $(window).scrollTop() + $(window).height()/2,
+            sectionBottom = sectionTop + section.height(),
+            windowBottom = windowTop + $(window).height()/2;
+        if(windowTop >= sectionTop && sectionBottom <= windowBottom) {
             $('.sc__wrap').removeClass('start');
         }
-        if (windowTop <= sectionTop && windowTop < scrollDirection) {
-            $('.sc__wrap').addClass('start');
-        }
-        scrollDirection = windowTop;
     });
 })(jQuery);
