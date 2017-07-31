@@ -110,7 +110,6 @@ main .mo__btn.transparent:hover {
 }
 
 .main {
-    min-width: 70%;
     display: flex;
 }
 
@@ -191,6 +190,10 @@ main .mo__btn.transparent:hover {
     .descr__block {
         padding-right: 40px;
     }
+
+    .main {
+        min-width: 70%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -253,7 +256,7 @@ main .mo__btn.transparent:hover {
 
 @media (max-width: 650px) {
     .params {
-        min-width: 160px;
+        min-width: 145px;
     }
 
     .breed .mo__btn {
@@ -270,8 +273,8 @@ main .mo__btn.transparent:hover {
         max-width: 60px;
     }
 
-    .navbar__item {
-        padding: 0;
+    .fixed__block {
+        max-width: 100%;
     }
 }
 

@@ -30,7 +30,7 @@ section {
 
 .image__fixed__block.fixed {
     position: fixed;
-    top: 100px;
+    top: 204px;
 }
 
 .image__fixed__block.bottom {
@@ -95,7 +95,7 @@ section {
 }
 
 .main {
-    min-width: 70%;
+    /*min-width: 70%;*/
     display: flex;
 }
 
@@ -229,6 +229,30 @@ section {
     left: 15px;
 }
 
+.profile .h2 {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 5;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.profile .h2.fixed {
+    position: fixed;
+    top: 90px;
+    width: 753px;
+}
+
+.image__container {
+    margin-top: 100px;
+}
+
+.description {
+    margin-top: 100px;
+}
+
+
 @media (min-width: 992px) {
     .specification {
         list-style: none;
@@ -300,19 +324,54 @@ section {
     }
 }
 
-@media (max-width: 524px) {
+@media (max-width: 650px) {
+    .params {
+        min-width: 145px;
+    }
+
+    .column .mo__btn {
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 550px) {
     .swiper__btn {
         top: 40px;
     }
-    .main .table__header {
-        line-height: 3;
+
+    .icon {
+        max-width: 75px;
     }
 
     .navbar__item img {
         max-width: 60px;
     }
 
+    .fixed__block {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .icon {
+        max-width: 60px;
+    }
+
+    .dot {
+         margin: 0;
+    }
+
     .navbar__item {
         padding: 0;
+         min-width: inherit;
+    }
+
+    .current {
+        bottom: 20px;
+        left: -10px;
+    }
+
+    .img__cell img {
+        height: auto;
     }
 }

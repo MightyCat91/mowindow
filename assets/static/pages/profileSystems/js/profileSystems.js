@@ -12,7 +12,13 @@
     //блок быстрой навигации
         fixedBlock = $('.fixed__block'),
     //смещение блока навигации относительно начала страницы
-        fixedBlockOffset = fixedBlock.offset().top;
+        fixedBlockOffset = fixedBlock.offset().top,
+        header__1 = $('.profile__1 .h2'),
+        header__1__offset = header__1.offset().top - 260,
+        header__2 = $('.profile__2 .h2'),
+        header__2__offset = header__2.offset().top - 110,
+        header__3 = $('.profile__3 .h2'),
+        header__3__offset = header__3.offset().top;
 
     //если ширина окна менее 992рх
     if (window.innerWidth < 992) {
@@ -34,38 +40,41 @@
     windowBrowser.scroll(function () {
         //смещение скролла
         var windowTop = $(this).scrollTop(),
+            header__1__bottom = windowTop + header__1.height(),
+            header__2__bottom = windowTop + header__2.height(),
+            header__3__bottom = windowTop + header__3.height(),
         //контейнер контента, к которому прявазан блок быстрой навигации
             sectionHeight = $('.wrapper'),
         //контейнер блока фиксированного изображения
             containerFixedImageBlock__1 = $('.profile__1 .image__container'),
         //блок фиксированного изображения
             fixedImageBlock__1 = containerFixedImageBlock__1.find('.image__fixed__block'),
-        //смещение блока изображения относительно начала страницы
-            offsetContainerFixedImageBlock__1 = containerFixedImageBlock__1.offset().top - 90,
+        //смещение блока изображения относительно начала страницы - высота меню - хедер блока
+            offsetContainerFixedImageBlock__1 = containerFixedImageBlock__1.offset().top - 194,
         //нижняя граница блока изображения
             bottomImageFixedBlock__1 = windowTop + fixedImageBlock__1.height(),
         //нижняя граница контейнера блока фиксированного изображения
-            bottomContainerImageFixedBlock__1 = containerFixedImageBlock__1.offset().top + containerFixedImageBlock__1.height() - 100,
+            bottomContainerImageFixedBlock__1 = containerFixedImageBlock__1.offset().top + containerFixedImageBlock__1.height() - 190,
         //контейнер блока фиксированного изображения
             containerFixedImageBlock__2 = $('.profile__2 .image__container'),
         //блок фиксированного изображения
             fixedImageBlock__2 = containerFixedImageBlock__2.find('.image__fixed__block'),
-        //смещение блока изображения относительно начала страницы
-            offsetContainerFixedImageBlock__2 = containerFixedImageBlock__2.offset().top - 90,
+        //смещение блока изображения относительно начала страницы - высота меню - хедер блока
+            offsetContainerFixedImageBlock__2 = containerFixedImageBlock__2.offset().top - 194,
         //нижняя граница блока изображения
             bottomImageFixedBlock__2 = windowTop + fixedImageBlock__2.height(),
         //нижняя граница контейнера блока фиксированного изображения
-            bottomContainerImageFixedBlock__2 = containerFixedImageBlock__2.offset().top + containerFixedImageBlock__2.height() - 100,
+            bottomContainerImageFixedBlock__2 = containerFixedImageBlock__2.offset().top + containerFixedImageBlock__2.height() - 190,
         //контейнер блока фиксированного изображения
             containerFixedImageBlock__3 = $('.profile__3 .image__container'),
         //блок фиксированного изображения
             fixedImageBlock__3 = containerFixedImageBlock__3.find('.image__fixed__block'),
-        //смещение блока изображения относительно начала страницы
-            offsetContainerFixedImageBlock__3 = containerFixedImageBlock__3.offset().top - 90,
+        //смещение блока изображения относительно начала страницы - высота меню - хедер блока
+            offsetContainerFixedImageBlock__3 = containerFixedImageBlock__3.offset().top - 194,
         //нижняя граница блока изображения
             bottomImageFixedBlock__3 = windowTop + fixedImageBlock__3.height(),
         //нижняя граница контейнера блока фиксированного изображения
-            bottomContainerImageFixedBlock__3 = containerFixedImageBlock__3.offset().top + containerFixedImageBlock__3.height() - 100,
+            bottomContainerImageFixedBlock__3 = containerFixedImageBlock__3.offset().top + containerFixedImageBlock__3.height() - 190,
         //нижняя граница блока быстрой навигации
             bottomFixed = windowTop + fixedBlock.height(),
         //нижняя граница контейнера блока быстрой навигации - отступ
@@ -104,9 +113,18 @@
             fixedContainer.height(sectionHeight.height());
             //211 = высота нефиксированного меню + нижний отступ секции__1 + верхний отступ у блока навигации
             positioning(fixedBlock, fixedBlockOffset - 211, bottomFixed, bottomFixedContainer);
-            positioning(fixedImageBlock__1, offsetContainerFixedImageBlock__1, bottomImageFixedBlock__1, bottomContainerImageFixedBlock__1);
-            positioning(fixedImageBlock__2, offsetContainerFixedImageBlock__2, bottomImageFixedBlock__2, bottomContainerImageFixedBlock__2);
-            positioning(fixedImageBlock__3, offsetContainerFixedImageBlock__3, bottomImageFixedBlock__3, bottomContainerImageFixedBlock__3);
+            positioning(header__1, header__1__offset, header__1__bottom,
+                bottomContainerImageFixedBlock__1 - fixedImageBlock__1.height(), fixedImageBlock__1.height() + 60);
+            positioning(header__2, header__2__offset, header__2__bottom,
+                bottomContainerImageFixedBlock__2 - fixedImageBlock__2.height(), fixedImageBlock__2.height() + 60);
+            positioning(header__3, header__3__offset, header__3__bottom,
+                bottomContainerImageFixedBlock__3 - fixedImageBlock__3.height(), fixedImageBlock__3.height() + 60);
+            positioning(fixedImageBlock__1, offsetContainerFixedImageBlock__1,
+                bottomImageFixedBlock__1, bottomContainerImageFixedBlock__1);
+            positioning(fixedImageBlock__2, offsetContainerFixedImageBlock__2,
+                bottomImageFixedBlock__2, bottomContainerImageFixedBlock__2);
+            positioning(fixedImageBlock__3, offsetContainerFixedImageBlock__3,
+                bottomImageFixedBlock__3, bottomContainerImageFixedBlock__3);
         }
 
         /*
@@ -115,8 +133,9 @@
          * fixedBlockOffset - смещение фиксируемого блока относительно начала страницы
          * bottomFixedBlock - нижняя граница фиксируемого блока
          * bottomFixedContainer - нижняя граница контейнера фиксируемого блока
+         * headerBottom - нижняя граница заголовка, по достижении которой он "прилипает"
          */
-        function positioning(fixedBlock, fixedBlockOffset, bottomFixedBlock, bottomFixedContainer) {
+        function positioning(fixedBlock, fixedBlockOffset, bottomFixedBlock, bottomFixedContainer, headerBottom) {
             //если текущий скролл меньше верхней границы фиксируемого блока
             if (windowTop < fixedBlockOffset) {
                 //позиционируем блок абсолютно
@@ -129,19 +148,27 @@
                 if (bottomFixedBlock >= bottomFixedContainer) {
                     //устанавливаем блоку абсолютное позициониование и прижимаем к низу контейнера
                     fixedBlock.addClass('bottom');
+                    //если блок==заголовок, то устанавливаем высоту прилипания
+                    if (fixedBlock[0].nodeName == 'H2') {
+                        fixedBlock.css('bottom', headerBottom + 20);
+                    }
                     fixedBlock.removeClass('fixed');
                 } else {
                     //устанавливаем блоку фиксированное позиционирование
                     fixedBlock.removeClass('bottom');
+                    //если блок==заголовок, то удаляем высоту прилипания
+                    if (fixedBlock[0].nodeName == 'H2') {
+                        fixedBlock.css('bottom', '');
+                    }
                 }
             }
         }
 
-        //для каждой части высоты блоков "сосна","лиственница","дуб"
+        //для каждой части высоты блоков "стандарт","алю","классик"
         $(dot).each(function (index, element) {
-            //в зависимости от скролла страницы окрашиваем соответствующую точку между кнопками "сосна" и "лиственница"
+            //в зависимости от скролла страницы окрашиваем соответствующую точку между кнопками "стандарт" и "алю"
             dotScrolled('profile__1', block__1__Offset, block__1__Height, index, element);
-            //между кнопками "лиственница" и "дуб"
+            //между кнопками "алю" и "классик"
             dotScrolled('profile__2', block__2__Offset, block__2__Height, index, element);
             dotScrolled('profile__3', block__3__Offset, block__3__Height, index, element);
         });
