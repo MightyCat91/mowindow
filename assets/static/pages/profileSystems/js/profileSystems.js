@@ -18,7 +18,7 @@
         header__2 = $('.profile__2 .h2'),
         header__2__offset = header__2.offset().top - 110,
         header__3 = $('.profile__3 .h2'),
-        header__3__offset = header__3.offset().top;
+        header__3__offset = header__3.offset().top - 110;
 
     //если ширина окна менее 992рх
     if (window.innerWidth < 992) {
@@ -115,10 +115,13 @@
             positioning(fixedBlock, fixedBlockOffset - 211, bottomFixed, bottomFixedContainer);
             positioning(header__1, header__1__offset, header__1__bottom,
                 bottomContainerImageFixedBlock__1 - fixedImageBlock__1.height(), fixedImageBlock__1.height() + 60);
+            header__1.width($('.profile').width());
             positioning(header__2, header__2__offset, header__2__bottom,
                 bottomContainerImageFixedBlock__2 - fixedImageBlock__2.height(), fixedImageBlock__2.height() + 60);
+            header__2.width($('.profile').width());
             positioning(header__3, header__3__offset, header__3__bottom,
                 bottomContainerImageFixedBlock__3 - fixedImageBlock__3.height(), fixedImageBlock__3.height() + 60);
+            header__3.width($('.profile').width());
             positioning(fixedImageBlock__1, offsetContainerFixedImageBlock__1,
                 bottomImageFixedBlock__1, bottomContainerImageFixedBlock__1);
             positioning(fixedImageBlock__2, offsetContainerFixedImageBlock__2,
