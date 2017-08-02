@@ -16,6 +16,10 @@
     background: #f9f9fb;
 }
 
+.custom__window__form .swiper-container .container {
+    display: none;
+}
+
 .slider__1, .slider__2, .decor__panel {
     margin: 60px auto 0;
     min-height: 570px;
@@ -103,6 +107,10 @@
 
     .custom__window__form .swiper-slide {
         text-align: center;
+    }
+
+    .custom__window__form .swiper-container .container {
+        display: block;
     }
 
     .swiper-container.customize .slide__content.descr {

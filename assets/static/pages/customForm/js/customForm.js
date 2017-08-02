@@ -18,18 +18,18 @@
     var mySwiper = new Swiper('.custom__window__form .swiper-container', {
         slidesPerView: 2,
         nextButton: $('.custom__window__form .swiper-button-next'),
-        prevButton: $('.custom__window__form .swiper-button-prev')
+        prevButton: $('.custom__window__form .swiper-button-prev'),
+        breakpoints: {
+            // when window width is <= 992px
+            992: {
+                slidesPerView: 1
+            }
+        }
     });
-    mySwiper.lockSwipes();
 
     if ($(window).width() < 992) {
-        //new Swiper('.custom__window__form .swiper-container', {
-        //    slidesPerView: 1,
-        //    nextButton: $('.custom__window__form .swiper-button-next'),
-        //    prevButton: $('.custom__window__form .swiper-button-prev')
-        //});
         mySwiper.unlockSwipes();
-        mySwiper.params.slidesPerView = 1;
+    } else {
+        mySwiper.lockSwipes();
     }
-
 })(jQuery);
