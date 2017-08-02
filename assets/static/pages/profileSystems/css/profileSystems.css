@@ -2,11 +2,11 @@ section {
     margin-bottom: 60px;
 }
 
-.section__1 {
+.form__container {
     background: url(../images/header.png) no-repeat 10% #cacaca;
 }
 
-.section__1 .callback__form {
+.form__container .callback__form {
     margin: 40px 0;
 }
 
@@ -264,7 +264,7 @@ section {
 }
 
 @media (max-width: 992px) {
-    .section__1 {
+    .form__container {
         margin-bottom: 0;
     }
 

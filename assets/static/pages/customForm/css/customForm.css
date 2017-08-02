@@ -1,15 +1,11 @@
-.section__1 {
+.form__container {
     position: relative;
     display: flex;
 }
 
-.section__1 .image {
+.form__container .image {
     z-index: 1;
     margin-top: 40px;
-}
-
-.section__2 .swiper-slide {
-    text-align: center;
 }
 
 .form {
@@ -20,32 +16,42 @@
     background: #f9f9fb;
 }
 
-.section__3, .section__5, .section__6 {
-    margin: 60px auto;
+.slider__1, .slider__2, .decor__panel {
+    margin: 60px auto 0;
     min-height: 570px;
 }
 
-.section__3 .swiper-container, .section__5 .swiper-container {
+.slider__1 .swiper-container, .slider__2 .swiper-container {
     max-width: 1600px;
 }
 
-.slider__container {
+.swiper-container.customize .slide__content {
     position: absolute;
-    z-index: 10;
-    color: #fff;
-    left: 100px;
-    margin-top: 90px;
-    width: calc(50% - 100px);
+    left: 0;
+    right: 0;
+}
+
+.slide__content.header {
+    top: 0;
+}
+
+.swiper-container.customize .slide__content.descr {
+    bottom: 50px;
+    padding-top: 0;
+}
+
+.swiper-container.customize .swiper-slide {
+     min-height: 100%;
 }
 
 .swiper-button-prev {
-    background: url("../../../base/img/nav_gr_left.png");
+    background: url("/assets/static/base/img/nav_gr_left.png");
     width: 55px;
     height: 55px;
 }
 
 .swiper-button-next {
-    background: url("../../../base/img/nav_gr_right.png");
+    background: url("/assets/static/base/img/nav_gr_right.png");
     width: 55px;
     height: 55px;
 }
@@ -67,31 +73,26 @@
     width: 100%;
 }
 
-.section__3 img, .section__5 img {
+.slider__1 img, .slider__2 img {
     max-width: none;
 }
 
-
-.section__5 {
+.slider__2 {
     margin-bottom: 0;
 }
 
-.section__5.mobile {
-    margin-bottom: 60px;
-}
-
-.section__6 {
-    background: url(../images/profile.jpg) no-repeat 0 0/contain;
+.decor__panel {
+    background: url(/assets/static/pages/customForm/images/profile.jpg) no-repeat 0 0/contain;
     margin: 0;
     background-position-x: -270px;
 }
 
 @media (max-width: 992px) {
-    .section__1 {
+    .form__container {
         flex-direction: column;
     }
 
-    .section__1 .image {
+    .form__container .image {
         text-align: center;
     }
 
@@ -100,9 +101,15 @@
         text-align: center;
     }
 
-    .slider__container {
-        width: calc(100% - 200px);
-        height: 100%;
+    .custom__window__form .swiper-slide {
+        text-align: center;
+    }
+
+    .swiper-container.customize .slide__content.descr {
+        padding-top: 20px;
+        position: relative;
+        color: #2b2929;
+        bottom: 0;
     }
 }
 

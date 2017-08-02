@@ -1,17 +1,35 @@
 (function ($) {
-    new Swiper('.section__3 .swiper-container', {
+    new Swiper('.slider__1 .swiper-container', {
         spaceBetween: 0,
         loop: false,
         autoplay: false,
-        nextButton: $('.section__3 .swiper-button-next'),
-        prevButton: $('.section__3 .swiper-button-prev')
+        nextButton: $('.slider__1 .swiper-button-next'),
+        prevButton: $('.slider__1 .swiper-button-prev')
     });
 
-    new Swiper('.section__5 .swiper-container', {
+    new Swiper('.slider__2 .swiper-container', {
         spaceBetween: 0,
         loop: false,
         autoplay: false,
-        nextButton: $('.section__5 .swiper-button-next'),
-        prevButton: $('.section__5 .swiper-button-prev')
+        nextButton: $('.slider__2 .swiper-button-next'),
+        prevButton: $('.slider__2 .swiper-button-prev')
     });
+
+    var mySwiper = new Swiper('.custom__window__form .swiper-container', {
+        slidesPerView: 2,
+        nextButton: $('.custom__window__form .swiper-button-next'),
+        prevButton: $('.custom__window__form .swiper-button-prev')
+    });
+    mySwiper.lockSwipes();
+
+    if ($(window).width() < 992) {
+        //new Swiper('.custom__window__form .swiper-container', {
+        //    slidesPerView: 1,
+        //    nextButton: $('.custom__window__form .swiper-button-next'),
+        //    prevButton: $('.custom__window__form .swiper-button-prev')
+        //});
+        mySwiper.unlockSwipes();
+        mySwiper.params.slidesPerView = 1;
+    }
+
 })(jQuery);

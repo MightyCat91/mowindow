@@ -1,7 +1,7 @@
 section {
     margin-bottom: 60px;
 }
-.section__1 {
+.form__container {
     background: url(../images/header.jpg) no-repeat 50%/cover;
 }
 
@@ -20,7 +20,7 @@ section {
     margin-bottom: 40px;
 }
 
-.section__2 .descr__block:first-child .accent, .section__5 .accent:first-child {
+.section__2 .descr__block:first-child .accent, .slider__2 .accent:first-child {
     margin-top: 0;
     display: block;
 }
@@ -59,23 +59,23 @@ section:not(.section__4) .mo__btn.transparent:hover {
     color: #fff;
 }
 
-.section__3 h2 {
+.slider__1 h2 {
     text-align: center;
     width: 100%;
 }
 
-.section__3 .accent {
+.slider__1 .accent {
     margin-bottom: 0;
 }
 
-.section__3 h4 {
+.slider__1 h4 {
     font-size: 22px;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-.section__3 p {
+.slider__1 p {
     margin-bottom: 40px;
 }
 

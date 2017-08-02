@@ -42,7 +42,7 @@ h2.accent {
     position: absolute;
 }
 
-.section__3 .description, .section__3 li span {
+.slider__1 .description, .slider__1 li span {
     background-color: #ededed;
 }
 
@@ -74,11 +74,11 @@ h2.accent {
     float: right;
 }
 
-.section__3 .image {
+.slider__1 .image {
     background-color: #e4e5e6;
 }
 
-.section__3 .img__wrapper div {
+.slider__1 .img__wrapper div {
     margin: 0 10px;
 }
 
