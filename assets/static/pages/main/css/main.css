@@ -1,0 +1,25 @@
+.start > .s_item.s {
+    transform: matrix(1, .2, 0, 1, 5, -81);
+}
+.start > .s_item.r {
+    transform: matrix(.5, -.8, 1, .5, 168, -185);
+}
+.start > .s_item.br {
+    transform: matrix(.4, 1, -1, .2, -108, -193);
+}
+.start > .s_item.o {
+    transform: matrix(.7, .5, -.7, .6, -69, -162);
+}
+.start > .s_item.g {
+    transform: matrix(.8, -.4, .4, .8, -38, -104);
+}
+.start > .s_item.b {
+    transform: matrix(.8, .3, -.3, .8, -132, -95);
+}
+
+
+.s_item.s, .s_item.r, .s_item.br, .s_item.o, .s_item.g, .s_item.b {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
