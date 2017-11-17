@@ -1,0 +1,11 @@
+.image .swiper-button-prev {
+    background: url("../images/button-left.png");
+    height: 55px;
+    width: 55px;
+}
+
+.image .swiper-button-next {
+    background: url("../images/button-right.png");
+    height: 55px;
+    width: 55px;
+}

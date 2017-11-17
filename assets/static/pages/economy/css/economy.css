@@ -1,0 +1,14 @@
+.economy {
+    background: url(../images/house.png) no-repeat right top;
+    background-size: auto 100%;
+    min-height: 560px;
+}
+
+.economy h2 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.corner__region {
+    background-color: #f9f9fb;
+}

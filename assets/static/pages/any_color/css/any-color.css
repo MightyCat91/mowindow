@@ -54,17 +54,6 @@ a.fancy {
     margin-bottom: 40px;
 }
 
-.rimmel__corner__img {
-    position: relative;
-    min-height: 518px;
-    display: flex;
-    justify-content: center;
-}
-
-.rimmel__corner__img img {
-    position: absolute;
-}
-
 .rimmel__paint {
     margin-bottom: 40px;
 }
