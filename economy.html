@@ -148,7 +148,7 @@
     </section>
     <section class="corner__region">
         <div class="container">
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-6 col-xs-12 image__corner__wrapper">
                 <img src="assets/static/pages/economy/images/corner__region-2.png">
             </div>
             <div class="col-md-6 col-xs-12 description">
@@ -191,7 +191,7 @@
     </section>
     <section class="call__region">
         <div class="container">
-            <h2 class="h2">Заказать звонок</h2>
+            <h2 class="h2 text-center">Заказать звонок</h2>
             <form class="callback__form " method="post"
                   action="assets/components/calls/callRequestExtendedHandler.php">
                 <div class="form-group">
@@ -201,8 +201,6 @@
                 <div class="form-group">
                     <input type="tel" name="phone" required="" placeholder="Телефон" maxlength="18">
                 </div>
-                <p style="font-size:10px;">Заполняя заявку, я соглашаюсь с условиями предоставлении своих персональных
-                    данных. <a href="/politika-zashhityi-i-obrabotki-personalnyix-dannyh.html">Условия</a>.</p>
                 <div class="form-group">
                     <input class="mo__btn" onclick="yaCounter44740036.reachGoal('recallall'); return true;"
                            type="submit" value="Перезвоните мне">
@@ -210,27 +208,31 @@
 
                 <input type="hidden" value="http://mowindow.ru/nestandartnaya-forma.html" name="page">
             </form>
+            <p>Заполняя заявку, я соглашаюсь с условиями предоставлении своих персональных
+                данных. <a href="/politika-zashhityi-i-obrabotki-personalnyix-dannyh.html">Условия</a>.</p>
         </div>
     </section>
     <section class="glass__corner">
         <div class="container">
-            <div class="col-md-6 col-xs-12">
-                <img src="assets/static/pages/economy/images/glass.png">
+            <div class="col-md-6 col-xs-12 gif__wrapper">
+                <!--<img src="assets/static/pages/economy/images/glass.png">-->
             </div>
             <div class="col-md-6 col-xs-12 description">
+                <h2 class="accent">Как стеклопакет помогает экономить?</h2>
+                <h2 class="h2">Мультифункциональный стеклопакет</h2>
                 <div class="season__wrapper">
-                    <h4>Зимой</h4>
+                    <h2>Зимой</h2>
                     <p>Принцип действия: Покрытие из ионов серебра на одном из стекол стеклопакета позволяет пропускать
                         зимой коротковолновую солнечную энергию и отражать обратно в помещение тепловой поток от
                         отопительных приборов, при высоких показателях прозрачности (светопропускания).</p>
-                    <div class="winter__demonstrate">Как работает?</div>
+                    <div class="winter__demonstrate mo__btn">Как работает?</div>
                 </div>
 
                 <div class="season__wrapper">
-                    <h4>Летом</h4>
+                    <h2>Летом</h2>
                     <p>Летом же такой стеклопакет сохранит прохладу в вашем доме. Мультифункциональный стеклопакет
                         существенно позволит сэкономить затраты на кондиционировании летом.</p>
-                    <div class="summer__demonstrate">Как работает?</div>
+                    <div class="summer__demonstrate mo__btn">Как работает?</div>
                 </div>
 
                 <div class="descr__block">
@@ -259,87 +261,89 @@
     </section>
     <section class="diagram">
         <div class="container">
-            <div class="diagram__container">
-                <h4>Экономия расходов на отопление и кондиционирование</h4>
-                <div class="diagram__wrapper col-md-8 col-xs-8">
-                    <img src="assets/static/pages/economy/images/diagramm-1.png">
+            <div class="diagram__common__container">
+                <div class="diagram__container">
+                    <h2>Экономия расходов на отопление и кондиционирование</h2>
+                    <div class="diagram__wrapper col-md-8 col-xs-8">
+                        <img src="assets/static/pages/economy/images/diagramm-1.png">
+                    </div>
+                    <div class="legend__wrapper col-md-4 col-xs-4">
+                        <div class="legend__item">
+                            <p>Окна MoWindow</p>
+                        </div>
+                        <div class="legend__item">
+                            <p>Окна с обычными стеклопакетами</p>
+                        </div>
+                        <div class="legend__item">
+                            <p>Окна без стеклопакетов</p>
+                        </div>
+                    </div>
+                    <div class="economy__bars__container">
+                        <div class="price__container">
+                            <div class="price__wrapper">
+                                <p class="price">8 578</p>
+                                <p>рублей/год</p>
+                            </div>
+                            <p class="text-uppercase">экономия с окнами movindows*</p>
+                            <div class="bar__wrapper">
+                                <img src="assets/static/pages/economy/images/progress-1-1.png">
+                            </div>
+                        </div>
+                        <div class="price__container">
+                            <div class="price__wrapper">
+                                <p class="price">2 578</p>
+                                <p>рублей/год</p>
+                            </div>
+                            <p class="text-uppercase">экономия с обычными окнами*</p>
+                            <div class="bar__wrapper">
+                                <img src="assets/static/pages/economy/images/progress-1-1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <p>* сумма экономии рассчитывается для загородного дома, общей площадью 120 кв.м., по сравнению с
+                        окнами без стеклопакетов</p>
                 </div>
-                <div class="legend__wrapper col-md-4 col-xs-4">
-                    <div class="legend__item">
-                        <p>Окна MoWindow</p>
+                <div class="diagram__container">
+                    <h2>Температура в доме при одинаковом отоплении и охлаждении помещения</h2>
+                    <div class="diagram__wrapper col-md-8 col-xs-8">
+                        <img src="assets/static/pages/economy/images/diagramm-2.png">
                     </div>
-                    <div class="legend__item">
-                        <p>Окна с обычными стеклопакетами</p>
+                    <div class="legend__wrapper col-md-4 col-xs-4">
+                        <div class="legend__item">
+                            <p>Окна MoWindow</p>
+                        </div>
+                        <div class="legend__item">
+                            <p>Окна с обычными стеклопакетами</p>
+                        </div>
+                        <div class="legend__item">
+                            <p>Окна без стеклопакетов</p>
+                        </div>
                     </div>
-                    <div class="legend__item">
-                        <p>Окна без стеклопакетов</p>
+                    <div class="economy__bars__container">
+                        <div class="percent__container">
+                            <div class="percent__wrapper">
+                                <p class="percent">56</p>
+                                <p>%</p>
+                            </div>
+                            <p class="text-uppercase">за год*</p>
+                            <div class="circle__wrapper">
+                                <img src="assets/static/pages/economy/images/progress-2-1.png">
+                            </div>
+                        </div>
+                        <div class="percent__container">
+                            <div class="percent__wrapper">
+                                <p class="percent">87</p>
+                                <p>%</p>
+                            </div>
+                            <p class="text-uppercase">за год*</p>
+                            <div class="circle__wrapper">
+                                <img src="assets/static/pages/economy/images/progress-2-2.png">
+                            </div>
+                        </div>
                     </div>
+                    <p>* % употребляемой за год электроэнергии для поддержания в доме, общей площадью 120 кв.м., комфортной
+                        температуры 23 ОС. За 100% взяты показатели электроэнергии для дома с окнами без стеклопакетов.</p>
                 </div>
-                <div class="economy__bars__container">
-                    <div class="price__container">
-                        <div class="price__wrapper">
-                            <p class="price">8 578</p>
-                            <p>рублей/год</p>
-                        </div>
-                        <p class="text-uppercase">экономия с окнами movindows*</p>
-                        <div class="bar__wrapper">
-                            <img src="assets/static/pages/economy/images/progress-1-1.png">
-                        </div>
-                    </div>
-                    <div class="price__container">
-                        <div class="price__wrapper">
-                            <p class="price">2 578</p>
-                            <p>рублей/год</p>
-                        </div>
-                        <p class="text-uppercase">экономия с обычными окнами*</p>
-                        <div class="bar__wrapper">
-                            <img src="assets/static/pages/economy/images/progress-1-1.png">
-                        </div>
-                    </div>
-                </div>
-                <p>* сумма экономии рассчитывается для загородного дома, общей площадью 120 кв.м., по сравнению с
-                    окнами без стеклопакетов</p>
-            </div>
-            <div class="diagram__container">
-                <h4>Температура в доме при одинаковом отоплении и охлаждении помещения</h4>
-                <div class="diagram__wrapper col-md-8 col-xs-8">
-                    <img src="assets/static/pages/economy/images/diagramm-2.png">
-                </div>
-                <div class="legend__wrapper col-md-4 col-xs-4">
-                    <div class="legend__item">
-                        <p>Окна MoWindow</p>
-                    </div>
-                    <div class="legend__item">
-                        <p>Окна с обычными стеклопакетами</p>
-                    </div>
-                    <div class="legend__item">
-                        <p>Окна без стеклопакетов</p>
-                    </div>
-                </div>
-                <div class="economy__bars__container">
-                    <div class="percent__container">
-                        <div class="percent__wrapper">
-                            <p class="percent">56</p>
-                            <p>%</p>
-                        </div>
-                        <p class="text-uppercase">за год*</p>
-                        <div class="circle__wrapper">
-                            <img src="assets/static/pages/economy/images/progress-2-1.png">
-                        </div>
-                    </div>
-                    <div class="percent__container">
-                        <div class="percent__wrapper">
-                            <p class="percent">87</p>
-                            <p>%</p>
-                        </div>
-                        <p class="text-uppercase">за год*</p>
-                        <div class="circle__wrapper">
-                            <img src="assets/static/pages/economy/images/progress-2-2.png">
-                        </div>
-                    </div>
-                </div>
-                <p>* % употребляемой за год электроэнергии для поддержания в доме, общей площадью 120 кв.м., комфортной
-                    температуры 23 ОС. За 100% взяты показатели электроэнергии для дома с окнами без стеклопакетов.</p>
             </div>
         </div>
     </section>
@@ -355,8 +359,6 @@
                 <div class="form-group">
                     <input type="tel" name="phone" required="" placeholder="Телефон" maxlength="18">
                 </div>
-                <p style="font-size:10px;">Заполняя заявку, я соглашаюсь с условиями предоставлении своих персональных
-                    данных. <a href="/politika-zashhityi-i-obrabotki-personalnyix-dannyh.html">Условия</a>.</p>
                 <div class="form-group">
                     <input class="mo__btn" onclick="yaCounter44740036.reachGoal('recallall'); return true;"
                            type="submit" value="Перезвоните мне">
@@ -364,9 +366,12 @@
 
                 <input type="hidden" value="http://mowindow.ru/nestandartnaya-forma.html" name="page">
             </form>
+            <p>Заполняя заявку, я соглашаюсь с условиями предоставлении своих персональных
+                данных. <a href="/politika-zashhityi-i-obrabotki-personalnyix-dannyh.html">Условия</a>.</p>
         </div>
     </section>
     <link href="assets/static/pages/economy/css/economy.css" rel="stylesheet" property="stylesheet"/>
+    <script src="assets/static/pages/economy/js/economy.js" type="text/javascript"></script>
 </main>
 <footer>
     <div class="container">

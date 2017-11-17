@@ -11,4 +11,134 @@
 
 .corner__region {
     background-color: #f9f9fb;
+    padding-bottom: 40px;
+    min-height: 700px;
+}
+
+.image__corner__wrapper {
+    position: relative;
+}
+
+.image__corner__wrapper img {
+    position: absolute;
+    top: -40px;
+}
+
+.specification {
+    list-style: none;
+    padding: 0;
+}
+
+.specification li {
+    border-bottom: 1px dotted;
+    position: relative;
+}
+
+.specification li span {
+    background-color: #fff;
+    bottom: -7px;
+    padding: 0 2px 5px;
+}
+
+.key {
+    text-align: left;
+}
+
+.value {
+    right: 0;
+    position: absolute;
+}
+
+.call__region {
+    color: #fff;
+    background-color: #707070;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.callback__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.call__region input:not(.mo__btn) {
+    background: #fff;
+    min-width: 375px;
+    min-height: 60px;
+    border-radius: 5px;
+}
+
+.call__region .mo__btn {
+    min-height: 60px;
+    border-radius: 30px;
+    min-width: 210px;
+    background: #37b349;
+}
+
+.call__region .mo__btn {
+    min-height: 60px;
+    border-radius: 30px;
+    min-width: 210px;
+    background: #37b349;
+}
+
+.call__region .mo__btn:hover {
+    background: #7fd968;
+}
+
+.gif__wrapper {
+    margin-top: 100px;
+    min-height: 700px;
+    background: url(../images/glass.png) no-repeat center;
+}
+
+.gif__wrapper.winter {
+    background: url(../images/moWindow_economy_winter.gif) center, url(../images/glass.png) no-repeat center;
+}
+
+.gif__wrapper.summer {
+    background: url(../images/moWindow_economy_summer.gif) center, url(../images/glass.png) no-repeat center;
+}
+
+.season__wrapper h2 {
+    margin-top: 50px;
+}
+
+.season__wrapper .mo__btn {
+    margin-top: 30px;
+}
+
+.diagram {
+    min-height: 900px;
+    background: url(../images/diagram__background.jpg) no-repeat left bottom;
+    background-size: cover;
+}
+
+.diagram__common__container {
+    display: flex;
+    background: #11131f;
+    opacity: .75;
+    margin-top: 110px;
+    margin-bottom: 110px;
+}
+
+.diagram__common__container h2 {
+    color: #fff;
+}
+
+.legend__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.percent__container {
+    position: relative;
+}
+
+.percent__wrapper {
+    display: flex;
+}
+
+.circle__wrapper {
+    position: absolute;
 }
