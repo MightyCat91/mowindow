@@ -1,7 +1,11 @@
-.economy {
-    background: url(../images/house.png) no-repeat right top;
-    background-size: auto 100%;
-    min-height: 560px;
+/*.economy {*/
+/*background: url(../images/house.png) no-repeat right top;*/
+/*background-size: auto 100%;*/
+/*min-height: 450px;*/
+/*}*/
+
+.economy .description {
+    padding-bottom: 60px;
 }
 
 .economy h2 {
@@ -11,4 +15,300 @@
 
 .corner__region {
     background-color: #f9f9fb;
+    min-height: 600px;
+}
+
+.image__corner__wrapper {
+    position: relative;
+}
+
+.image__corner__wrapper img {
+    position: absolute;
+    top: -40px;
+}
+
+.specification {
+    list-style: none;
+    padding: 0;
+}
+
+.specification li {
+    border-bottom: 1px dotted;
+    position: relative;
+}
+
+.specification li span {
+    bottom: -7px;
+    padding: 0 2px 5px;
+}
+
+.key {
+    text-align: left;
+}
+
+.value {
+    right: 0;
+    position: absolute;
+}
+
+.glass__corner {
+    margin-bottom: 100px;
+}
+
+.call__region {
+    color: #fff;
+    background-color: #707070;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.callback__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.call__region input {
+    font-size: 14px;
+}
+
+.call__region input:not(.mo__btn) {
+    background: #fff;
+    min-width: 375px;
+    color: #646464;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+.call__region .mo__btn {
+    min-height: 60px;
+    border-radius: 30px;
+    text-transform: none;
+    min-width: 210px;
+    background: #37b349;
+}
+
+.call__region .mo__btn {
+    min-height: 30px;
+    border-radius: 30px;
+    min-width: 210px;
+    background: #37b349;
+}
+
+.call__region .mo__btn:hover {
+    background: #7fd968;
+}
+
+.gif__wrapper {
+    margin-top: 100px;
+    min-height: 700px;
+    background: url(../images/glass.png) no-repeat center;
+}
+
+.gif__wrapper.winter {
+    background: url(../images/moWindow_economy_winter.gif) no-repeat center, url(../images/glass.png) no-repeat center;
+}
+
+.gif__wrapper.summer {
+    background: url(../images/moWindow_economy_summer.gif) no-repeat center, url(../images/glass.png) no-repeat center;
+}
+
+.season__wrapper h2 {
+    margin-top: 50px;
+}
+
+.season__wrapper .mo__btn {
+    margin-top: 30px;
+}
+
+.diagram {
+    min-height: 900px;
+    background: url(../images/diagram__background.jpg) no-repeat left bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.diagram__common__container {
+    display: flex;
+    background: #11131f;
+    opacity: .75;
+}
+
+.diagram__common__container h2 {
+    color: #fff;
+}
+
+.diagram__container {
+    margin-bottom: 30px;
+}
+
+.diagram__wrapper {
+    display: flex;
+    min-height: 196px;
+}
+
+.diagram__image__wrapper {
+    min-width: 70%;
+}
+
+.legend__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 30%;
+    color: #fff;
+}
+
+.legend__item.first:before {
+    content: '';
+    width: 10px;
+    height: 3px;
+    margin-bottom: 6px;
+    background-color: #01b43e;
+    display: block;
+}
+
+.legend__item.second:before {
+    content: '';
+    width: 10px;
+    height: 3px;
+    margin-bottom: 6px;
+    background-color: #1e9ece;
+    display: block;
+}
+
+.legend__item.third:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-bottom: 6px;
+    background-color: #41415c;
+    display: block;
+}
+
+.economy__bars__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.circle {
+    justify-content: flex-start;
+}
+
+.economy__bars__container.circle > :first-child {
+    background: url(../images/progress-2-1.png) no-repeat left bottom;
+}
+
+.economy__bars__container.circle > :last-child {
+    background: url(../images/progress-2-2.png) no-repeat left bottom;
+}
+
+.bar__wrapper img {
+    width: 100%;
+}
+
+.text__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 152px;
+    min-height: 152px;
+}
+
+.percent__container {
+    position: relative;
+    margin-right: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.price__wrapper, .percent__wrapper {
+    display: flex;
+    color: #fff;
+    align-items: baseline;
+}
+
+.price, .percent {
+    font-size: 50px;
+    margin: 0 5px 0;
+}
+
+.price + p, .percent + p {
+    font-size: 25px;
+    margin: 0;
+}
+
+.circle__wrapper {
+    position: absolute;
+    top: 0;
+}
+
+.purple__color {
+    color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .callback__form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image__corner__wrapper img {
+        max-width: 90%;
+        top: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .image__corner__wrapper img {
+        position: relative;
+    }
+
+    .diagram__wrapper, .economy__bars__container {
+        justify-content: space-around;
+    }
+
+    .percent__container {
+        margin-right: 0;
+    }
+
+    .diagram {
+        background: none;
+    }
+
+    .custom__container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .diagram__image__wrapper {
+        min-width: unset;
+    }
+
+    .diagram__common__container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .call__region input:not(.mo__btn) {
+        min-width: 310px;
+    }
+
+    .diagram__wrapper {
+        flex-direction: column;
+    }
+
+    .diagram__image__wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 568px) {
+    .economy__bars__container {
+        flex-direction: column;
+    }
 }
